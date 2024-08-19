@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import altair as alt
+import plotly.express as px
 import numpy as np
 
 import utils
@@ -75,12 +76,11 @@ def calculate_dvh():
         st.divider()
 
         if x:
-            st.markdown(f"## Step 2: Choose structures")
+            st.markdown(f"## Step 2: Visualize DVH")
             df = utils.dvh_from_files(dose_file, mask_files)
-            structures = st.multiselect(
-                "Choose structures", list(df.index), list(df.index)
-            )
-            display_dvh(df, structures)
+            #st.write(df)
+            fig = px.line(df, x="Dose", y="Volume", color="Structure")
+            st.plotly_chart(fig, use_container_width=True)
 
 
 page_names_to_funcs = {
