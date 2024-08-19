@@ -80,6 +80,8 @@ def calculate_dvh():
             df = utils.dvh_from_files(dose_file, mask_files)
             #st.write(df)
             fig = px.line(df, x="Dose", y="Volume", color="Structure")
+            fig.update_xaxes(showgrid=True)
+            fig.update_yaxes(showgrid=True)
             st.plotly_chart(fig, use_container_width=True)
 
 
