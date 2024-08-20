@@ -33,27 +33,19 @@ def display_dvh(df, structures):
 
 
 def instructions():
-    st.write("# DVH Calculator! 👋")
+    st.write("# DVH Calculator:")
     st.sidebar.success("Select an option above.")
 
     st.markdown(
         """
-        Streamlit is an open-source app framework built specifically for
-        Machine Learning and Data Science projects.
+        This web-app calculates DVH curves and allied statistics from a Dose distribution + segmentation masks.
 
-        **👈 Select a demo from the dropdown on the left** to see some examples
-        of what Streamlit can do!
+        This lives here: [dvh-calculator.streamlit.app](https://dvh-calculator.streamlit.app).
 
         ### Want to learn more?
 
         - Check out [insta-rt.github.io](https://insta-rt.github.io) for more info
         - Reach out back to us at [insta-rt.github.io/contact](https://insta-rt.github.io/contact)
-
-        ### See more complex demos
-
-        - Use a neural net to [analyze the Udacity Self-driving Car Image
-          Dataset](https://github.com/streamlit/demo-self-driving)
-        - Explore a [New York City rideshare dataset](https://github.com/streamlit/demo-uber-nyc-pickups)
     """
     )
 
